@@ -54,3 +54,5 @@ Xなどを活用した宣伝
 -  PostgreSQL
 ###  開発環境
 -  docker
+### 画面遷移図
+https://www.figma.com/file/EQCaB1PI65ODXzuZWqI8Hi/%E3%83%88%E3%83%A9%E3%82%B3%E3%83%9F%E7%94%BB%E9%9D%A2%E9%81%B7%E7%A7%BB?type=design&node-id=0%3A1&mode=design&t=NT88iGvF1PyZacSw-1
