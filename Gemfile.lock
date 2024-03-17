@@ -344,6 +344,7 @@ DEPENDENCIES
   rspec-rails
   rubocop
   rubocop-rails
+  selenium-webdriver
   solargraph
   sprockets-rails
   tzinfo-data
