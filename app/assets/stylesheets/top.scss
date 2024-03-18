@@ -1,0 +1,63 @@
+.menu-container{
+  padding: 50px;
+}
+
+.menu-item {
+    text-align: center;
+    align-items: center;
+    border: 1px solid #999;
+    border-right: none;
+    padding: 10px;
+    width: 170px;
+  }
+
+  .menu-item:last-child {
+    border-right: 1px solid #333;
+  }
+
+  .menu-item a {
+    text-decoration: none;
+    color: #333;
+  }
+  .top-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+  }
+  
+  .top-inner-text {
+    text-align: center;
+  }
+  
+  .famous-quote {
+    margin: auto;
+    text-align: center;
+    width: fit-content;
+    padding: 30px;
+  }
+  
+  .quote-container {
+    border: 1px solid #999;
+    padding: 10px;
+  }
+  
+  .quote-text {
+    margin-bottom: 0;
+    color: #333;
+  }
+  
+  .quote-author {
+    text-align: right;
+  }
+
+  .slackside-one-regular {
+    font-family: "Slackside One", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
