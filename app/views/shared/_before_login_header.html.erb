@@ -1,0 +1,66 @@
+<header>
+  <nav class="navbar navbar-expand-lg" style="background-color: #FFA41B;">
+    <div class="container-fluid">
+      <div class="d-flex justify-content-center align-items-center">
+        <%= link_to '#', class: "text-black slackside-one-regular text-decoration-none navbar-brand" do %>
+          <h1>トラコミ</h1>
+        <% end %>
+      </div>
+      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 d-flex flex-row justify-content-center">
+          <li class="nav-item">
+            <div class="menu-item p-2 d-flex flex-column align-items-center position-relative">
+              <div>
+                <span class="material-icons md-36">
+                  article
+                </span>
+              </div>
+              <div>
+                <%= link_to "投稿", "#", class: "stretched-link nav-link"%>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <div class="menu-item p-2 d-flex flex-column align-items-center position-relative">
+              <div>
+                <span class="material-icons md-36">
+                  view_list
+                </span>
+              </div>
+              <div>
+                <%= link_to "掲示板", "#", class: "stretched-link nav-link"  %>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <div class="menu-item p-2 d-flex flex-column align-items-center position-relative">
+              <div>
+                <span class="material-icons md-36">
+                  calendar_month
+                </span>
+              </div>
+              <div>
+                <%= link_to "アーカイブ", "#", class: "stretched-link nav-link"%>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <div class="menu-item p-2 d-flex flex-column align-items-center position-relative">
+              <div>
+                <span class="material-icons md-36">
+                  login
+                </span>
+              </div>
+              <div>
+                <%= link_to "ログイン", "#", class: "stretched-link nav-link"%>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
