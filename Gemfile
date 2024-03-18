@@ -53,6 +53,8 @@ gem "solargraph"
 
 gem "faker"
 
+gem "sorcery"
+
 gem "rails-i18n", "~> 7.0.0"
 
 gem "sassc-rails", "~> 2.1"
