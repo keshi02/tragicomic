@@ -7,9 +7,11 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      redirect_to login_path
+      auto_login(@user)
+      redirect_to root_path, success: t('users.create.success')
     else
-      render :new
+      flash.now[:danger] = t('users.create.failure')
+      render :new, status: :see_other
     end
   end
 

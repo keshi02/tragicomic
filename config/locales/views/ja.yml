@@ -1,2 +1,37 @@
 ja:
   helpers:
+    create: ログイン
+  label:
+    email: メールアドレス
+    password: パスワード
+  defaults:
+    create: 作成
+    post:  投稿
+    edit:  編集
+    delete:  削除
+  flash_message:
+    require_login:  ログインしてください
+  header:
+    login: ログイン
+    logout:  ログアウト
+    post: 投稿
+    archive: アーカイブ
+    mypage: マイページ
+    bulletin_board: 掲示板
+  user_session:
+    new:
+      title: ログイン
+      to_register_page:  登録がまだの方はこちら
+      password_forget:  パスワードを忘れた方はこちら
+    create:
+      success:  ログインしました
+      failure:  ログインできませんでした
+    destroy:
+      success: ログアウトしました
+  users:
+    new:
+      title:  ユーザー登録
+    create:
+      success:  ユーザーを登録しました
+      failure:  ユーザーを登録できませんでした
+      
