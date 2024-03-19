@@ -7,7 +7,7 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application" %>
-    <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module", defer: true %>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,9 +16,14 @@
 
   <body style="color: #333;">
 
-    <%= render "shared/before_login_header" %>
-    
+    <% if logged_in? %>
+      <%= render "shared/header" %>
+    <% else %>
+      <%= render "shared/before_login_header" %>
+    <% end %>
+    <%= render "shared/flash_message" %>
     <%= yield %>
+
     <%= render "shared/footer" %>
   </body>
 </html>
