@@ -19,7 +19,7 @@
                 </span>
               </div>
               <div>
-                <%= link_to t('header.post'), "#", class: "stretched-link nav-link"%>
+                <%= link_to t('header.post'), posts_path, class: "stretched-link nav-link"%>
               </div>
             </div>
           </li>
@@ -55,7 +55,7 @@
                 </span>
               </div>
               <div>
-                <%= link_to t('header.login'), logout_path, data: { turbo_method: :delete }, class: "stretched-link nav-link"%>
+                <%= link_to t('header.logout'), logout_path, data: { turbo_method: :delete }, class: "stretched-link nav-link"%>
               </div>
             </div>
           </li>
