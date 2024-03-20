@@ -1,6 +1,8 @@
 <div id="post-id-<%= post.id %>">
-  <div class="card mb-4 mx-auto">
-    <%= image_tag "/app/assets/images", height: '350', class: "card-img-top" %>
+  <div class="card mt-3 mb-4 mx-auto">
+  <% if post.post_image.present? %>
+    <%= image_tag post.post_image.url, height: '350', class: "card-img-top" %>
+  <% end %>
     <div class="card-body">
       <h5 class="card-title">
         <%= post.user.name %>

@@ -3,11 +3,8 @@
     <div class="ms-2">
     <h1><%= t('.title') %></h1>
     <%= form_with model: @post do |f|%>
-      <div class="mb-3 me-3">
-        <%= f.label :name, t('helper.name'), class: "mt-4" %>
-        <%= f.text_field :name, class: "form-control" %>
-      </div>
-      <div class="mb-3 me-3">
+
+      <div class="mb-3 me-3 mt-4">
         <%= f.label :post_image %>
         <%= f.file_field :post_image, class: "form-control", accept: 'image/*' %>
       </div>

@@ -67,7 +67,9 @@ gem "font-awesome-sass", "~> 6.5.0"
 
 gem "turbo-rails"
 
-gem 'jquery-rails'
+gem "jquery-rails"
+
+gem "carrierwave", "3.0.6"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
