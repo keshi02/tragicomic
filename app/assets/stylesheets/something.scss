@@ -1,3 +1,4 @@
+// メニュー
 .menu-item {
     text-align: center;
     align-items: center;
@@ -14,12 +15,13 @@
   .menu-item a {
     text-decoration: none;
   }
+// トップページ
   .top-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 80vh;
-    padding: 100px;
+    padding: 80px;
   }
   
   .top-inner-text {
@@ -46,13 +48,13 @@
   .quote-author {
     text-align: right;
   }
-
+// フォント
   .slackside-one-regular {
     font-family: "Slackside One", cursive;
     font-weight: 400;
     font-style: normal;
   }
-
+// ボタン
   .scroll-top{
     cursor: pointer;
     outline: none;
@@ -66,7 +68,7 @@
     font-weight: 900;
   }
 
-  
+// google fonts アイコンサイズ
 .material-icons.md-18 { font-size: 18px; }
 .material-icons.md-24 { font-size: 24px; }
 .material-icons.md-36 { font-size: 36px; }

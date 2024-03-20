@@ -8,5 +8,8 @@ class User < ApplicationRecord
   validates :password, confirmation: true, if: -> { new_record? || changes[:crypted_password] }, on: :create
   validates :password_confirmation, presence: true, if: -> { new_record? || changes[:crypted_password] }, on: :create
   validates :email, presence: true, uniqueness: true
-end
 
+  def own?(object)
+    id == object&.user_id
+  end
+end

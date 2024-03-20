@@ -1,19 +1,38 @@
 <div id="post-id-<%= post.id %>">
-  <div class="card mt-3 mb-4 mx-auto">
-  <% if post.post_image.present? %>
-    <%= image_tag post.post_image.url, height: '350', class: "card-img-top" %>
-  <% end %>
+  <div class="card mt-3 mx-auto">
+
+    <% if post.post_image.present? %>
+      <%= image_tag post.post_image.url, height: '350', class: "card-img-top" %>
+    <% end %>
+
     <div class="card-body">
-      <h5 class="card-title">
+      <div class="d-flex justify-content-between">
+
+        <h5 class="card-title">
         <%= post.user.name %>
-      </h5>
+        </h5>
+
+        <% if current_user.own?(post) %>
+          <div class="d-flex justify-content-end">
+            <%= link_to post_path(post), id: "button-delete-#{post.id}", data: {turbo_method: :delete, turbo_confirm: t('defaults.delete_confirm')} do %>
+              <span class="material-icons md-36">
+                delete_outline
+              </span>
+            <% end %>
+          </div>
+        <% end %>
+
+      </div>
+
       <p class="card-text">
         <%= post.body %>
       </p>
+     
       <div class="text-end">
-        <button type="button" class="btn btn-primary active">
+        <button type="button" class="btn btn-info active">
           悲劇 <span class="badge text-bg-secondary">4</span>
         </button>
+
         <button type="button" class="btn btn-warning active">
           喜劇 <span class="badge text-bg-secondary">4</span>
         </button>

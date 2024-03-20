@@ -18,6 +18,12 @@ class PostsController < ApplicationController
     end
   end
 
+  def destroy
+    post = current_user.posts.find(params[:id])
+    post.destroy!
+    redirect_to posts_path, status: :see_other, success: t('posts.destroy.success')
+  end
+
   private
 
   def post_params
