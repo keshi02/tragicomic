@@ -1,17 +1,21 @@
-
-  <div id="">
-    <div class="card mb-4 mx-auto">
-      <%= image_tag "/app/assets/images", height: '350', class: "card-img-top" %>
-      <div class="card-body">
-      <h5 class="card-title">名前</h5>
-      <p class="card-text">茶瓶割ったなう</p>
+<div id="post-id-<%= post.id %>">
+  <div class="card mb-4 mx-auto">
+    <%= image_tag "/app/assets/images", height: '350', class: "card-img-top" %>
+    <div class="card-body">
+      <h5 class="card-title">
+        <%= post.user.name %>
+      </h5>
+      <p class="card-text">
+        <%= post.body %>
+      </p>
       <div class="text-end">
-      <button type="button" class="btn btn-primary">
-        悲劇 <span class="badge text-bg-secondary">4</span>
-      </button>
-      <button type="button" class="btn btn-warning">
-        喜劇 <span class="badge text-bg-secondary">4</span>
-      </button>
+        <button type="button" class="btn btn-primary active">
+          悲劇 <span class="badge text-bg-secondary">4</span>
+        </button>
+        <button type="button" class="btn btn-warning active">
+          喜劇 <span class="badge text-bg-secondary">4</span>
+        </button>
       </div>
     </div>
   </div>
+</div>
