@@ -6,4 +6,12 @@ class Post < ApplicationRecord
   has_many :reactions, dependent: :destroy
 
   mount_uploader :post_image, PostImageUploader
+
+  def tragedy_count
+    reactions.where(reaction_flag: :tragedy).count
+  end
+
+  def comedy_count
+    reactions.where(reaction_flag: :comedy).count
+  end
 end

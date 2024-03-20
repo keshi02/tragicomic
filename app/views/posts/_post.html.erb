@@ -9,10 +9,10 @@
       <div class="d-flex justify-content-between">
 
         <h5 class="card-title">
-        <%= post.user.name %>
+          <%= post.user.name %>
         </h5>
 
-        <% if current_user.own?(post) %>
+        <% if current_user && current_user.own?(post) %>
           <div class="d-flex justify-content-end">
             <%= link_to post_path(post), id: "button-delete-#{post.id}", data: {turbo_method: :delete, turbo_confirm: t('defaults.delete_confirm')} do %>
               <span class="material-icons md-36">
@@ -27,15 +27,38 @@
       <p class="card-text">
         <%= post.body %>
       </p>
-     
       <div class="text-end">
-        <button type="button" class="btn btn-info active">
-          悲劇 <span class="badge text-bg-secondary">4</span>
-        </button>
+      
+ 
+        <% if current_user.reactions.where(reaction_flag: :tragedy, post_id: post.id).exists? %>
+          <%= link_to reaction_path(current_user.reactions.find_by(post_id: post.id)), id: "notragedy-button-for-post-#{post.id}", data: { turbo_method: :delete } do %>
+            <button type="button" class="btn btn-info active">
+              <%= t('reaction.tragedy') %> <span class="badge text-bg-secondary"><%= post.tragedy_count %></span>
+            </button>
+          <% end %>
+        <% else %>
+          <%= link_to reactions_path(reaction_flag: :tragedy, post_id: post), id: "tragedy-button-for-post-#{post.id}", data: { turbo_method: :post } do %>
+            <button type="button" class="btn btn-info active">
+              <%= t('reaction.tragedy') %> <span class="badge text-bg-secondary"><%= post.tragedy_count %></span>
+            </button>
+          <% end %>
+        <% end %>
+    
+        <% if current_user.reactions.where(reaction_flag: :comedy, post_id: post.id).exists? %>
+          <%= link_to reaction_path(current_user.reactions.find_by(post_id: post.id)), id: "nocomedy-button-for-post-#{post.id}", data: { turbo_method: :delete } do %>
+            <button type="button" class="btn btn-warning active">
+              <%= t('reaction.comedy') %> <span class="badge text-bg-secondary"><%= post.comedy_count %></span>
+            </button>
+          <% end %>
+        <% else %>
+          <%= link_to reactions_path(reaction_flag: :comedy, post_id: post), id: "comedy-button-for-post-#{post.id}", data: { turbo_method: :post } do %>
+            <button type="button" class="btn btn-warning active">
+              <%= t('reaction.comedy') %> <span class="badge text-bg-secondary"><%= post.comedy_count %></span>
+            </button>
+          <% end %>
+        <% end %>
 
-        <button type="button" class="btn btn-warning active">
-          喜劇 <span class="badge text-bg-secondary">4</span>
-        </button>
+
       </div>
     </div>
   </div>

@@ -43,4 +43,7 @@ ja:
       failure: 投稿できませんでした
     destroy:
       success: 削除しました
+  reaction:
+    tragedy: 悲劇
+    comedy: 喜劇
 
