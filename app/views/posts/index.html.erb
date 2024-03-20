@@ -3,7 +3,7 @@
     <div class="col-xl-6 col-lg-7 col-md-9 col-sm-11 col-xs-12 mx-auto ">
       <div class="row border rounded">
         <% if @posts.present? %>
-          <%= render @posts %>
+          <%= render @posts, {post: @post} %>
         <% else %>
           <div class="mb-3 slackside-one-regular h3">
             ポストがありません...
