@@ -3,6 +3,7 @@ ja:
     models:
       user: ユーザー
       post: 投稿
+      reaction: リアクション
     attributes:
       user:
         name: 名前
@@ -12,3 +13,6 @@ ja:
       post:
         post_image: 画像
         body: 本文
+      reaction:
+        tragidy: 悲劇
+        comedy: 喜劇
