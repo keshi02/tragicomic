@@ -1,0 +1,26 @@
+<div class="container", style = "height: 100vh;">
+  <div class="row">
+    <div class="col-md-10 col-lg-8 mx-auto mt-5">
+      <h1> 新しいパスワードを設定してください </h1>
+      <%= form_with model: @user, url: password_reset_path(@token), method: :patch  do |f| %>
+       <div class="mb-3"> 
+         <%= f.label :email, class: "form-label" %>
+         <div>
+         <%= @user.email %>
+         </div>
+       </div>
+       <div class="mb-3"> 
+         <%= f.label :password, class: "form-label" %>
+         <%= f.password_field :password, class: "form-control" %>
+       </div>
+       <div class="mb-5"> 
+         <%= f.label :password_confirmation, class: "form-label" %>
+         <%= f.password_field :password_confirmation, class: "form-control" %>
+       </div>
+       <div class="mb-3 d-grid gap-2 d-md-flex justify-content-md-end">
+          <%= f.submit t('helpers.submit'), class: "btn btn-warning" %>
+       </div>
+       <% end %>
+    </div>
+  </div>
+</div>
