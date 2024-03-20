@@ -8,10 +8,4 @@ class ReactionsController < ApplicationController
       redirect_to posts_path
     end
   end
-  def destroy
-    @post = current_user.reactions.find(params[:id]).post
-    @reaction = Reaction.find_by(post_id: @post)
-    @reaction.destroy!
-    redirect_to posts_path, status: :see_other
-  end
 end

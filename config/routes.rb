@@ -18,6 +18,6 @@ Rails.application.routes.draw do
 
   resources :users, only: %i[new create]
   resources :posts, only: %i[new create index destroy]
-  resources :reactions, only: %i[create destroy]
+  resources :reactions, only: %i[create]
   resources :password_resets, only: %i[new create edit update]
 end
