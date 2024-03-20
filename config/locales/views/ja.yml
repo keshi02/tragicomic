@@ -1,6 +1,7 @@
 ja:
   helpers:
     create: ログイン
+    name: 名前（任意）
   label:
     email: メールアドレス
     password: パスワード
@@ -18,7 +19,7 @@ ja:
     archive: アーカイブ
     mypage: マイページ
     bulletin_board: 掲示板
-  user_session:
+  user_sessions:
     new:
       title: ログイン
       to_register_page:  登録がまだの方はこちら
@@ -34,4 +35,7 @@ ja:
     create:
       success:  ユーザーを登録しました
       failure:  ユーザーを登録できませんでした
+  posts:
+    new:
+      title: 投稿する
 
