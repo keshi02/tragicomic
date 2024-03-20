@@ -1,5 +1,6 @@
 ja:
   helpers:
+    submit: 送信
     create: ログイン
   label:
     email: メールアドレス
@@ -9,7 +10,8 @@ ja:
     post:  投稿
     edit:  編集
     delete:  削除
-    delete_confirm: 削除してもいいですか？
+    delete_confirm: 削除しますか？
+    password_reset: パスワードリセット
   flash_message:
     require_login:  ログインしてください
   header:
@@ -46,4 +48,10 @@ ja:
   reaction:
     tragedy: 悲劇
     comedy: 喜劇
-
+  password_resets:
+    new:
+      title: パスワードリセット
+    create:
+      success: パスワードの再設定についてメールでお知らせします
+    update:
+      success: パスワードを変更しました
