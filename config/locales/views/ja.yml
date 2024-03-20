@@ -9,6 +9,7 @@ ja:
     post:  投稿
     edit:  編集
     delete:  削除
+    delete_confirm: 削除してもいいですか？
   flash_message:
     require_login:  ログインしてください
   header:
@@ -40,4 +41,6 @@ ja:
     create:
       success: 投稿しました
       failure: 投稿できませんでした
+    destroy:
+      success: 削除しました
 
